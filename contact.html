@@ -7,59 +7,216 @@
     <title>MERLIN FASHION CLUB</title>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Nova+Cut&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Nova+Cut&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <style>
-   .slogan{
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/login-images/contact.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed;
+  }
+  .slogan {
     font-family: 'Beth Ellen', cursive;
-    color:black;
+    color: black;
     font-size: 36px;
   }
-   .author{
+  .author {
     font-family: 'Nova Cut', cursive;
-    color:black;
+    color: black;
   } 
-  .contact-info{
-    padding-top:170px;
+  .contact-info {
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid #333; /* Add border with a primary color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 100px; /* Adjust margin to push it below the navbar */
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .contact-info:hover {
+    transform: scale(1.02); /* Slightly enlarge the box on hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-info .slogan {
+    font-family: 'Pacifico', cursive; /* A stylish cursive font */
+    color: #FF5733; /* A vibrant, attention-grabbing color */
+    font-size: 25px; /* Slightly larger font size */
+    margin-bottom: 25px; /* Increase bottom margin for better spacing */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+  }
+
+  .contact-info .author {
+    font-family: 'Lobster', cursive; /* A stylish and elegant cursive font */
+    color: #333; /* A darker color for better contrast */
+    font-size: 24px; /* Slightly larger font size for readability */
+    margin-bottom: 25px; /* Increase bottom margin for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+  }
+
+  .contact-info .social-icons {
+    margin-top: 30px;
+  }
+
+  .contact-info .social-icons a {
+    margin: 0 10px;
+    font-size: 60px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .contact-info .social-icons a:hover {
+    color: #007BFF; /* Change icon color on hover */
+  }
+
+  nav {
+    width: 100%;
+    background: #fff;
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  nav .logo img {
+    height: 60px;
+    width: 200px;
+  }
+  nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline;
+    padding: 0 20px;
+  }
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 768px) {
+    .burger {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    .nav-links li {
+      display: block;
+      padding: 15px 0;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 992px) and (min-width: 777px) {
+    .vl {
+      height: 280px;
+    }
+  }
+  @media screen and (max-width: 778px) and (min-width: 591px) {
+    .vl {
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 592px) and (min-width: 421px) {
+    .vl {
+      height: 170px;
+    }
+  }
+  @media screen and (max-width: 423px) {
+    .vl {
+      height: 120px;
+    }
   }
 </style>
-<body> 
-    <!-- navbar -->
-      <nav>
-        <div class="logo">
-          <a href="merlin.html">
-            <img src="C:\Users\atiku\OneDrive - University of Roehampton\Clothing_Website_Trendelite-1\images\icons\logo.jpg" alt="Logo" class="logo-name">
-          </a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="categories.html">Categories</a></li>
-          <li><a href="contact.html">ContactUs</a></li>
-          <li><a href="login.html" id="login">Login</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    <!-- navbar -->
-    <center>
-      <div class="contact-info">
-        <p class="slogan">"Trend Elite"</p>
-        <p class="author"></p>
-        
-        <p class="author">shivanisingh260500@gmail.com</p>
-          <p class="author"><a href="https://www.linkedin.com/in/shivani-singh-86b640192/" class="logo-name">On LinkedIn</a></p>
+<body>
+  <!-- navbar -->
+  <nav>
+    <div class="logo">
+      <a href="merlin.html">
+        <img src="logo.png" alt="Logo" class="logo-name">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="contact.html">ContactUs</a></li>
+      <li><a href="login.html" id="login">Login</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <!-- navbar -->
+  <center>
+    <div class="contact-info">
+      <p class="slogan">"Connect with Style - We're Here to Help!"</p>
+      <p class="author"><i class="fas fa-envelope" style="color: #007BFF;"></i> shivanisingh260500@gmail.com</p>
+      <p class="author"><i class="fas fa-phone" style="color: #007BFF;"></i> 0777777777</p>
+      <div class="social-icons">
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/yourinstagramhandle" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/yourfacebookprofile" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook"></i></a>
       </div>
-    </center>
-      
-  
-  <script type="text/javascript" src="js/nav.js"></script>
-  </body>
+    </div>
+    <br>
+    <h2 style="color: #0735ed; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">About Us</h2>
+    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #fff;">We are dedicated to providing the best service possible. Our team is passionate about helping you connect with style and efficiency. With years of experience in the industry, we strive to make every interaction seamless and enjoyable. Thank you for choosing us!</p>
+  </center>
+  <script type="text/javascript">
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
 </html>
