@@ -1,132 +1,497 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Products</title>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
-    <link rel="stylesheet" href="css/style_index.css">
-    <link rel="stylesheet" href="css/categories.css">
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <head>
-  <body>
-    <!-- navbar -->
-      <nav> 
-        <div class="logo">
-          <a href="merlin.html">
-            <img src="logo.png" alt="Logo" class="logo-name">
-          </a>
-        </div>
+<head>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="categories.html">Categories</a></li>
-          <li><a href="contact.html">ContactUs</a></li>
-          <li><a href="login.html" id="login">Login</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    <!-- navbar -->
-      <h2 class="main-head-of-products">Everyone Has A Style Statment<br>
-        <span class="colored-word-bigger-size">FIND YOURS HERE!</span>
-      </h2>
+  <meta charset="utf-8">
+  <title>Products</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_index.css">
+  <link rel="stylesheet" href="css/categories.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+    .item {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .item img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border: 2px solid #000;
+      display: block;
+    }
+
+    .item p {
+      margin: 5px 0 0 0;
+      font-family: 'Montserrat', sans-serif;
+      color:black;
+    
+    }
+    .item select {
+      margin-top: 5px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .Burka .item, .kurti .item, .western .item, .heels .item,
+    .thawb .item, .shirt .item, .jeans .item, .shoes .item {
+      width: 300px;
+    }
+
+    .container > h1, .container > h4 {
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+  <nav>
+    <div class="logo">
+      <a href="merlin.html">
+        <img src="logo.png" alt="Logo" class="logo-name">
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="contact.html">ContactUs</a></li>
+      <li><a href="login.html" id="login">Login</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <!-- navbar -->
+  <h2 class="main-head-of-products">Everyone Has A Style Statement<br>
+    <span class="colored-word-bigger-size">FIND YOURS HERE!</span>
+  </h2>
+
+  <br>
+  <div class="bg-images">
+    <a href="products.html"><img src="images/products-img/marcus-loke-xXJ6utyoSw0-unsplash (1).jpg" alt=""></a>
+  </div>
+
+  <center><p class="msg-ps">
+    <span class="colored-word">Click</span> on the product to add it to your shopping list.
+    <br>Go below and check <span class="colored-word">YOUR CART</span> for details.
+  </p></center>
+
+  <div>
+    <h1>For <span class="colored-word">Her</span></h1>
+    <center><hr class="products-hr"></center>
+    <br><br>
+
+    <div class="container Burka">
+      <div class="item">
+        <img src="images/products-img/women/Burka 1.png" id="Black Burka with White Stones || £40.99" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Black Burka with White Stones  <br> <b>£40.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/Burka2.png" id="Gray Burka || £35.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Gray Burka <br> <b>£35.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/Burka3.png" id="Black Burka With Neqab || ££47.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Black Burka With Neqab <br> <b>£47.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/Burka5.png" id="Black Stylish Burka || £45.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Black Stylish Burka <br> <b>£45.99</b></p>
+      </div>
+    </div>
+
+    <div class="container kurti">
+      <div class="item">
+        <img src="images/products-img/women/kurti1.png" id="Red Ground Dress With Golden Dress || £ 55.99 " alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Red Ground Dress With Golden Dress <br> <b>£55.99</b> </p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/kurti2.png" id="Kurti with Plaju || £46.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Kurti with Plaju <br> <b>£46.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/kurti3.jpg" id="Golden Kurti With Red Plaju|| £47.95" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Golden Kurti With Red Plaju <br> <b>£47.45</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/kurti4.png" id="Stylish Orange Ground Dress||£57.35" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Stylish Orange Ground Dress  <br> <b>£57.35</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="container western">
+      <div class="item">
+        <img src="images/products-img/women/western1.png" id="Ives Solid Shirt Style Top ||  £21.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Ives Solid Shirt Style Top <br>  <b>£21.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/western2.png" id="Style Quotient Solid Top || £18.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Style Quotient Solid Top <br>  <b>£18.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/western3.jpg" id="HERE&NOW Printed A-Line Top || £15.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>HERE&NOW Printed A-Line Top <br> <b>£15.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/western4.webp" id="SASSAFRAS Ruffled Style Top || £19.99 " alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>SASSAFRAS Ruffled Style Top <br> <b>£19.99</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="container heels">
+      <div class="item">
+        <img src="images/products-img/women/heels1.jpg" id="Shetopia  Red Women Heels || £21.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">10</option>
+          <option value="10">10</option>
+        </select>
+        <p>Shetopia Women Red Heels <br> <b>£21.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/heels2.png" id="ZAPATOZ Women Heeled Boots || £22.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">10</option>
+          <option value="10">10</option>
+        </select>
+        <p>ZAPATOZ Women Black Heeled Boots <br> <b>£22.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/heels3.png" id="Allen Solly Women Solid Wedges || £19.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">10</option>
+          <option value="10">10</option>
+        </select>
+        <p>Allen Solly Women Solid Hills <br> <b>£19.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/women/heels4.jpg" id="Shoetopia Women Heels || £17.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">10</option>
+          <option value="10">10</option>
+        </select>
+        <p>Shoetopia Women Heels <br> <b>£17.99</b></p>
+      </div>
+    </div>
+
+    <h1>For <span class="colored-word">Him</span></h1>
+    <center><hr class="products-hr"></center>
+    <br><br>
+
+    <div class="container thawb">
+      <div class="item">
+        <img src="images/products-img/men/thawb12.png" id="Green Thawb || £29.99 " alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Green Thawb <br>  <b>£29.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/thawb14.png" id=" Simple Design Thawb  || £18.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p> Simple Design Thawb <br> <b>£18.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/thawb16.png" id="DILLINGER Blue Colour Round Neck Thawb || £34.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>DILLINGER Blue Colour Round Neck Thawb <br><b>£34.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/thawb17.png" id="Thawb with Hoodie || £34.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Thawb with Hoodie <br> <b>£34.99</b></p>
+      </div>
+    </div>
+
+    <div class="container shirt">
+      <div class="item">
+        <img src="images/products-img/men/shirt1.png" id="Formal Men Shirt || £17.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Formal Men Shirt <br><b>£17.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/shirt2.webp" id="Slimfit Shirt for Men || £15.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Slimfit Shirt for Men <br> <b>£15.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/shirt3.png" id="Stylish Shirt || £18.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Stylish Shirt <br> <b>£18.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/shirt4.jpg" id="Black And Blue Design Shirt || £25.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Blue And Black Design Shirt<br><b>£25.99</b></p>
+      </div>
+    </div>
+
+    <div class="container jeans">
+      <div class="item">
+        <img src="images/products-img/men/jeans1.webp" id="HIGHLANDER Men Slim Fit Jeans || £23.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>HIGHLANDER Men Slim Fit Jeans <br><b>23.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/jeans2.png" id="Roadster Men Super Skinny Fit Jeans || £28.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Roadster Men Super Skinny Fit Jeans <br> <b>28.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/jeans3.png" id=" Jeans Men Slim Straight Jeans || £30.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Calvin Klein Jeans Men Slim Straight Jeans <br><b>£30.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/jeans4.jpg" id="Black Men Slim Fit Jeans || £32.99" alt="" onclick="add(this.id)">
+        <select >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <p>Black Men Slim Fit Jeans <br><b>£32.99</b></p>
+      </div>
+    </div>
+
+    <div class="container shoes">
+      <div class="item">
+        <img src="images/products-img/men/shoe1.jpg" id="Blue Men Shoe || £28.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <p>Blue Men shoe <br><b>£28.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/shoe2.png" id="Yellow Men Sneakers || £26.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <p>Yellow Men Sneakers<br> <b>£28.99</b></p>
+      </div>
+      <div class="item">
+        <img src="images/products-img/men/shoe3.webp" id="Mactree Men Sneakers || £34.99" alt="" onclick="add(this.id)">
+        <select>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <p>Mactree Men Sneakers <br><b>£34.99</b></p>
+      </div>
+      <div class="item">
+        <select>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <img src="images/products-img/men/shoe4.png" id="HRX Men Pro Sneakers || £27.99" alt="" onclick="add(this.id)">
+        <p>HRX Men Pro Sneakers <br><b>£27.99</b></p>
+      </div>
+    </div>
+
+    <h4 class="sry-msg">Uh-Oh! We are <span class="colored-word">done</span> 🛒</h4>
+    <center><hr class="last-hr-of-product"></center>
+    <br><br>
+
+    <div class="cart-details">
+      <h2 class="head-of-cart">Your Cart</h2>
+      <hr class="hr-of-cart-head">
       <br>
-      <div class="bg-images">
-        <a href="products.html"><img src="images/products-img/marcus-loke-xXJ6utyoSw0-unsplash (1).jpg" alt=""></a>
-      </div>
+      <ul id="ul_pr"></ul>
+      <button class="btn-clear-list" onclick="emptyList()">
+        <span class="colored-word">Clear My List</span>
+      </button>
+      <br>
+      <small>Can't see anything? Click & add your favorite fashion in
+        <span class="colored-word">Shopping List!</span>
+      </small>
+    </div>
+    <br><br><br>
+  </div>
 
-      <center><p class="msg-ps">
-        <span class="colored-word">Click</span> on the product to add in your shopping list.
-        <br>Go below and check <span class="colored-word">YOUR CART</span> for details.
-      </p></center>
-
-      <div>
-        <h1>For <span class="colored-word">Her</span></h1>
-        <center><hr class="products-hr"></center>
-        <br><br>
-
-        <div class="kurti">
-          <img src="images/products-img/women/kurti1.png" id="AKS  Kurta with Plazzzo & Dupatta || Rs.1799" onclick="add(this.id)">
-          
-          <img src="images/products-img/women/kurti2.png" id="Nayo Women Solid Kurta with Trouser || Rs.1649"" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/kurti3.png" id="AKS Printed Staight Kurta || Rs.659" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/kurti4.png" id="Fabindia Slim Fit Straight Kurta || Rs.1990" alt="" onclick="add(this.id)">
-        </div> 
-        <div class="western">
-          <img src="images/products-img/women/western1.png"  id="Ives Solid Shirt Style Top || Rs.549" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/western2.png"  id="Style Quotient Solid Top || Rs.554" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/western3.png"  id="HERE&NOW Printed A-Line Top || Rs.549" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/western4.png"  id="SASSAFRAS Ruffled Shirt Style Top || Rs. 549" alt="" onclick="add(this.id)">
-        </div>
-        <div class="g-shoes">
-          <img src="images/products-img/women/g-shoe1.png"  id=" PUMA Women LQDCell || Rs.6999" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/g-shoe2.png"  id="ADIDAS Women Ultraboost19 Running || Rs.11899" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/g-shoe3.png"  id="HRX Womwn Abslute Run  || Rs.1549" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/g-shoe4.png"  id="Skercher Women GO RUN  || Rs.3249" alt="" onclick="add(this.id)">
-        </div>
-        <div class="heels">
-          <img src="images/products-img/women/heels1.png"  id="Shetopia Women Heels || Rs.499" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/heels2.png"  id="ZAPATOZ Women Heeled Boots || Rs.527" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/heels3.png"  id="Allen Solly Women Solid Wedged || Rs.2499" alt="" onclick="add(this.id)">
-          <img src="images/products-img/women/heels4.png"  id="Shoetopia Women Heels || Rs.499" alt="" onclick="add(this.id)">
-        </div>
-
-        <h1>For <span class="colored-word">Him</span></h1>
-        <center><hr class="products-hr"></center>
-        <br><br>
-
-        <div class="shirts">
-          <img src="images/products-img/men/shirt1.png"  id="Difference of Opinion Printed Shirt || Rs.449" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shirt2.png"  id="Moda Rapido Printed Round Neck T-shirt || Rs.486" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shirt3.png"  id="DILLINGER Colourblocked Round Neck T-shirt || Rs.404" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shirt4.png"  id="Roadster T-shirt with Shoulder patch || Rs.519" alt="" onclick="add(this.id)">
-        </div>
-        <div class="jeans">
-          <img src="images/products-img/men/jeans1.png"  id="HIGHLANDER Men Slim Fit Jeans || Rs.874" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/jeans2.png"  id="Roadster Men Super Skinny Fit Jeans || Rs.1199" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/jeans3.png"  id="Calvin Klein Jeans Mean Slim Straight Jeans || Rs.9599" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/jeans4.png"  id="LOCOMOTIVE Mean Slim Fit Jeans || Rs.999" alt="" onclick="add(this.id)">
-        </div>
-        <div class="joggers">
-          <img src="images/products-img/men/joggers1.png"  id="HRX Men Solid Joggers || Rs.934" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/joggers1.png"  id="HRX Men Solid Joggers || Rs.934" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/joggers1.png"  id="HRX Men Solid Joggers || Rs.934" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/joggers1.png"  id="HRX Men Solid Joggers || Rs.934" alt="" onclick="add(this.id)">
-        </div>
-        <div class="shoes">
-          <img src="images/products-img/men/shoe1.png"  id="PUMA Men Clasp IDP Sneakers || Rs.1304" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shoe2.png"  id="Levis Men Sneakers || Rs.1169" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shoe3.png"  id="Mactree Men Sneakers || Rs.679" alt="" onclick="add(this.id)">
-          <img src="images/products-img/men/shoe4.png"  id="HRX Men Pro Sneakers || Rs.1699" alt="" onclick="add(this.id)">
-        </div><br>
-
-        <h4 class="sry-msg">Uh-Oh! We are<span class="colored-word"> done</span>🛒</h4>
-        <center><hr class="last-hr-of-product"></center>
-        <br><br>
-
-        <div class="cart-details">
-          <h2 class="head-of-cart">Your Cart</h2>
-            <hr class="hr-of-cart-head">
-            <br>
-          <ul id="ul_pr">
-            
-          </ul>
-        <button class="btn-clear-list" onclick="emptyList()"> <span class="colored-word"> Clear My List</span></button> <br>
-          <small>Can't see anything? Click & add your favorite fashion in
-          <span class="colored-word"> Shopping List!</span> </small>
-        </div>
-        <br><br><br>
-      </div>
-      
-    <script src="nav.js"></script>
-    <script src="js/products.js"></script>
-  </body>
+  <script src="nav.js"></script>
+  <script src="js/products.js"></script>
+</body>
 </html>
