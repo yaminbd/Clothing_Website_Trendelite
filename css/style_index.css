@@ -183,3 +183,20 @@ img{
         font-size:19px;
     }
 }
+
+.card-body {
+    background-color: #01060a; /* Light grey background */
+    color: #343a40; /* Dark grey text color */
+}
+.btn-primary {
+    background-color: #007bff; /* Blue button background */
+    border-color: #007bff; /* Blue button border */
+}
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+}
+.card-footer {
+    background-color: #010509; /* Light grey footer background */
+    color: #6c757d; /* Secondary text color */
+}
